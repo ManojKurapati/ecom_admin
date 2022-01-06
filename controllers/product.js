@@ -24,15 +24,15 @@ function checkFileType(file, cb) {
   }
 }
 const s3 = new aws.S3({
-  accessKeyId: "AKIAJX3NISA5AKBGRFHQ",
-  secretAccessKey: "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",
-  Bucket: "btobsales"
+  accessKeyId: "AKIAXKHCXUNB5F7CU7ND",
+  secretAccessKey: "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",
+  Bucket: "waydb2b"
 });
 
 const uploadsBusinessGallery = multer({
   storage: multerS3({
     s3: s3,
-    bucket: "btobsales",
+    bucket: "waydb2b",
     acl: "public-read",
     key: function (req, file, cb) {
       cb(
